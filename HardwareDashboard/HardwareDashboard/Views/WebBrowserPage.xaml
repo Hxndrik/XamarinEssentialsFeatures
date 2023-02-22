@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HardwareDashboard.Views.WebBrowserPage"
+             xmlns:vm="clr-namespace:HardwareDashboard.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:WebBrowserViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Margin="20, 10, 40, 20">
+                <StackLayout HorizontalOptions="Start">
+                    <Label Text="Web Browser:" FontFamily="NotoSansBold" FontSize="24" TextColor="{StaticResource White}"/>
+                    <Rectangle/>
+                </StackLayout>
+
+                <StackLayout Margin="5, 0, 0, 0">
+                    <StackLayout Orientation="Vertical">
+                        <Entry Placeholder="Enter URL here" HorizontalOptions="FillAndExpand" Text="{Binding URLEntryFieldText, Mode=TwoWay}"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="Open from entry" Command="{Binding OpenBrwoserCommand}" CommandParameter="custom"
+                                HorizontalOptions="FillAndExpand"/>
+                            <Button Text="Open default" Command="{Binding OpenBrwoserCommand}" CommandParameter="default"
+                                HorizontalOptions="Fill"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

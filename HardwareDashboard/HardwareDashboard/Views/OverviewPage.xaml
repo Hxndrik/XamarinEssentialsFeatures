@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HardwareDashboard.Views.OverviewPage"
+             xmlns:vm="clr-namespace:HardwareDashboard.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:OverviewViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout  Margin="0, 0, 0, 0">
+            <!--header-->
+            <StackLayout Orientation="Vertical" Margin="15, 0, 0, 0" HorizontalOptions="StartAndExpand">
+                <Label Text="Select a feature:" FontFamily="NotoSansBold" FontSize="24" TextColor="{StaticResource White}"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                <Rectangle/>
+            </StackLayout>
+
+            <ScrollView  Margin="0, 30, 0, 0" >
+                <StackLayout x:Name="PART_FeatureList"  FlowDirection="LeftToRight" Orientation="Vertical" 
+                        BindableLayout.ItemsSource="{Binding XamarinEssentialFeatures}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Button Margin="5, 10, 5, 10" Text="{Binding FeatureName}" 
+                                    HorizontalOptions="FillAndExpand"
+                                    Command="{Binding Source={x:Reference PART_FeatureList},Path=BindingContext.OpenFeatureCommand}" 
+                                    CommandParameter="{Binding ViewName}" />
+
+                                <Rectangle HeightRequest=".5" WidthRequest="20" BackgroundColor="{StaticResource Accent}" Margin="10, 0, 10, 0"/>
+                            </StackLayout>
+                            
+                            
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

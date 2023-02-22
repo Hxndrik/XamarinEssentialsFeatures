@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HardwareDashboard.Views.BatteryPage"
+             xmlns:vm="clr-namespace:HardwareDashboard.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:BatteryViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Margin="20, 10, 40, 20" HorizontalOptions="Start">
+                <Label Text="Battery stats:" FontFamily="NotoSansBold" FontSize="24" TextColor="{StaticResource White}"/>
+                <Rectangle/>
+                <StackLayout Orientation="Vertical" Margin="5, 0, 0, 0">
+                    <Label Text="{Binding ChargeLevel, StringFormat='Charge Level: {0}%'}"/>
+                    <Label Text="{Binding BatteryState, StringFormat='Battery state: {0}'}"/>
+                    <Label Text="{Binding PowerSource, StringFormat='Power source: {0}'}"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

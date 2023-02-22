@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HardwareDashboard.Views.FlashlightPage"
+             xmlns:vm="clr-namespace:HardwareDashboard.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:FlashlightViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Margin="20, 10, 40, 20">
+                <StackLayout HorizontalOptions="Start">
+                    <Label Text="Flashlight:" FontFamily="NotoSansBold" FontSize="24" TextColor="{StaticResource White}"/>
+                    <Rectangle/>
+                </StackLayout>
+                <StackLayout Margin="5, 0, 0, 0">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="On" Command="{Binding FlashlightCommand}" CommandParameter="On"
+                                HorizontalOptions="FillAndExpand"/>
+                            <Button Text="Off" Command="{Binding FlashlightCommand}" CommandParameter="Off"
+                                HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

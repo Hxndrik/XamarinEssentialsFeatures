@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HardwareDashboard.Views.DeviceInformationPage"
+             xmlns:vm="clr-namespace:HardwareDashboard.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:DeviceInformationViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Margin="20, 10, 40, 20">
+                <StackLayout HorizontalOptions="Start">
+                    <Label Text="Device information:" FontFamily="NotoSansBold" FontSize="24" TextColor="{StaticResource White}"/>
+                    <Rectangle/>
+                </StackLayout>
+                <StackLayout Margin="5, 0, 0, 0">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="{Binding Model, StringFormat='Model: {0}'}"/>
+                        <Label Text="{Binding Manufacturer, StringFormat='Manufacturer: {0}'}"/>
+                        <Label Text="{Binding Name, StringFormat='Name: {0}'}"/>
+                        <Label Text="{Binding OS, StringFormat='OS: {0}'}"/>
+                        <Label Text="{Binding DeviceType, StringFormat='Type: {0}'}"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

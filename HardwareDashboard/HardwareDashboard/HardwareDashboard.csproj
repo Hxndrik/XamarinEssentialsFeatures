@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Assets\NewFolder\**" />
+    <EmbeddedResource Remove="Assets\NewFolder\**" />
+    <None Remove="Assets\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-Black.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-BlackItalic.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-Bold.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-BoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-ExtraBold.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-ExtraBoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-ExtraLight.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-ExtraLightItalic.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-Italic.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-Light.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-LightItalic.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-Medium.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-MediumItalic.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-Regular.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-SemiBold.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-SemiBoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-Thin.ttf" />
+    <None Remove="Assets\Fonts\Noto_Sans\NotoSans-ThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-Black.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-BlackItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-Bold.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-BoldItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-ExtraBold.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-ExtraBoldItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-ExtraLight.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-ExtraLightItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-Italic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-Light.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-LightItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-Medium.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-MediumItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-Regular.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-SemiBold.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-SemiBoldItalic.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-Thin.ttf" />
+    <EmbeddedResource Include="Assets\Fonts\Noto_Sans\NotoSans-ThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Windows.Foundation.UniversalApiContract">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Windows Kits\10\References\10.0.22000.0\Windows.Foundation.UniversalApiContract\14.0.0.0\Windows.Foundation.UniversalApiContract.winmd</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\BatteryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ClipboardView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ConnectivityPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\OverviewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DeviceInformationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\FlashlightPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\FlashlightView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WebBrowserPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\OverviewPage.xaml.cs">
+      <DependentUpon>OverviewPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
